@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ReceiverSample</string>
+    <string name="send_btn">Send</string>
+    <string name="hint_txt">enter phrase</string>
+</resources>

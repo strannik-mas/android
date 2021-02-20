@@ -1,0 +1,28 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    >
+
+    <RatingBar
+        android:id="@+id/list.item.rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/list.item.text"
+        android:layout_marginLeft="8dp"
+        android:text="Item text"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/list.item.rating"
+        android:layout_centerVertical="true"
+        style="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

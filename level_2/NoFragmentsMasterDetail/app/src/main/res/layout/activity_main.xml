@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Используется в портретном режиме - только список статей -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main.ll"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.nocompany.nofragmentsmasterdetail.MainActivity">
+
+    <com.nocompany.nofragmentsmasterdetail.ItemListView
+        android:id="@+id/main.itemlistview"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.nocompany.nofragmentsmasterdetail.ItemListView>
+    <!--
+
+    <include layout="@layout/detail"/>
+
+
+    <com.nocompany.nofragmentsmasterdetail.DetailView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main.detailview"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RatingBar
+            android:id="@+id/article.rating"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <WebView
+            android:id="@+id/article.webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+    </com.nocompany.nofragmentsmasterdetail.DetailView>
+
+    -->
+
+
+</LinearLayout>

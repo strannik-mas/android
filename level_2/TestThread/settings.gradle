@@ -1,0 +1,3 @@
+include ':testJavaThread'
+include ':app'
+rootProject.name = "TestThread"

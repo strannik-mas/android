@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Settings</string>
+
+
+
+    <string name="pref_accountLogin">pref_accountLogin</string>
+    <string name="pref_syncSyncInterval">pref_syncSyncInterval</string>
+    <string name="pref_sync">pref_sync</string>
+    <string name="pref_key_account_settings">pref_key_account_settings</string>
+    <string name="pref_accountPassword">pref_accountPassword</string>
+    <string name="pref_key_anonymous">pref_key_anonymous</string>
+    <string name="pref_key_anonymous_settings">pref_key_anonymous_settings</string>
+</resources>

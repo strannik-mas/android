@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AllNotificationsStarter.iml" filepath="$PROJECT_DIR$/AllNotificationsStarter.iml" group="AllNotificationsStarter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AllNotificationsStarter-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AllNotificationsStarter-app.iml" group="AllNotificationsStarter/app" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AllNotificationsStarter/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/level_2-AllNotificationsStarter.iml" filepath="$PROJECT_DIR$/.idea/modules/level_2-AllNotificationsStarter.iml" group="AllNotificationsStarter" />
+    </modules>
+  </component>
+</project>

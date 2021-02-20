@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "186685387121",
+    "firebase_url": "https://fir-5b52f.firebaseio.com",
+    "project_id": "fir-5b52f",
+    "storage_bucket": "fir-5b52f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186685387121:android:1a907ef06dd5f4ca4986d0",
+        "android_client_info": {
+          "package_name": "com.strannik.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186685387121-76tnrepivkb7e59bludk0bavnapk58dv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6LfomDpEtlMXKDNpckKEjU5-cLnFB9YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186685387121-76tnrepivkb7e59bludk0bavnapk58dv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

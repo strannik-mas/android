@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WidgetCurrency</string>
+
+    <string name="unknown">UNKNOWN</string>
+    <string name="USDRUB">USDRUB</string>
+    <string name="CONFIG_PENDING_INTENT">CONFIG_PENDING_INTENT</string>
+</resources>

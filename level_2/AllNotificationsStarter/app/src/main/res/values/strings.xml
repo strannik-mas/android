@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notification</string>
+    <string name="title_activity_reply">ReplyActivity</string>
+
+    <!--
+        Ключ в intent, отвечающий за передачу
+        текста, набранного пользователем
+        в inline reply actions
+    -->
+    <string name="KEY_TEXT_REPLY">key_text_reply</string>
+</resources>

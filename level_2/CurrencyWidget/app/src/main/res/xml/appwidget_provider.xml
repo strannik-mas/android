@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	configure это конфигурационная активити
+	updatePeriodMillis это частота обновления в милисекундах
+		android не будет обновлять виджет чаще чем раз в 20 минут
+-->
+<appwidget-provider
+    android:configure="com.example.student.widgetcurrency.MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/widget"
+    android:minHeight="40dp"
+    android:minWidth="140dp"
+    android:previewImage="@android:drawable/ic_btn_speak_now"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="10000"
+    android:widgetCategory="home_screen|keyguard"
+    />

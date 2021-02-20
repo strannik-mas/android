@@ -1,0 +1,7 @@
+<resources>
+    <string name="oops_msg">OOPS, something wrong!</string>
+    <string name="hello_pref">"Hello, "</string>
+    <string name="app_name">RelativeLayoutSample</string>
+    <string name="entry_hint">Enter field</string>
+    <string name="label_text">Enter text:</string>
+</resources>

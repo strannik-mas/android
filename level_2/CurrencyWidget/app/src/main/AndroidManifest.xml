@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.student.widgetcurrency">
+
+    <!--
+         Права на достпу в интернет, получение информации о сетевых подключения
+        и получение сигнала об окончании перезагрузки
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name=".CurrencyWidget"
+            android:exported="true">
+
+            <!--
+                 Обязательно для виджета
+                атрибут name может быть только таким
+                в арибуте resource ссылка на конфигурационный файл виджета
+            -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider" />
+            <!--
+                 Андроид будет слать виджету именно такой броадкаст чтобы
+                виджет мог обновиться
+                Частота посылки прописывается в конфигурационном xml
+                файле виджета
+            -->
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <!--
+                 Добавим свое событие для виджета
+                посылая такой броадкаст, можно заставить виджет обновляться
+                так часто как только нужно
+            -->
+            <intent-filter>
+                <action android:name="com.example.student.widgetcurrency.AUTOUPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.AppWidgetManager.ACTION_APPWIDGET_ENABLED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.AppWidgetManager.ACTION_APPWIDGET_DISABLED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".MainActivity">
+
+            <!-- Нужно чтобы активити была конфигурационной для виджета -->
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Загружаем данные по курсу валют с помощью этого сервиса -->
+        <service
+            android:name=".CurrencyIntentService"
+            android:exported="false" />
+
+        <!--
+        Этот ресивер будет пересоздавать алармы на обновление виджета
+        при перезагрузке устройства
+        -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".ServiceWakefulReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.student.widgetcurrency.WakefulBroadcastReceiver"/>
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">лабораторная на 48</string>
+    <string name="entry_hint">Поле ввода</string>
+    <string name="hello_pref">"Превед, "</string>
+    <string name="oops_msg">Что-то пошло не так</string>
+    <string name="label_text">Введите текст:</string>
+</resources>

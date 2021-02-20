@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NoteSample</string>
+    <string name="note_hint">Type note here ...</string>
+    <string name="item_edit_text">edit</string>
+    <string name="item_delete_text">delete</string>
+</resources>

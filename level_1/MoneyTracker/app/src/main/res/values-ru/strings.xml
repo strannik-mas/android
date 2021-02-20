@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Релиз Кошелек</string>
+    <string name="text_field_1">новый курс</string>
+    <string name="edit_text_name">Hазвание</string>
+    <string name="edit_text_price_hint">0 &#8372;</string>
+    <string name="tab_incomes">Доходы</string>
+    <string name="tab_expences">Расходы</string>
+    <string name="tab_balance">Балланс</string>
+    <string name="logo_desc">Ваш незаменимый помощник в управлении бюджетом</string>
+    <string name="balance_title">Ваш балланс</string>
+</resources>

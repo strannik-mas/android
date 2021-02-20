@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bottom.home" android:title="Home"
+        android:icon="@drawable/ic_baseline_airline_seat_recline_extra_24"/>
+    <item android:id="@+id/bottom.git" android:title="Git"
+        android:icon="@drawable/ic_baseline_beach_access_24"/>
+    <item android:id="@+id/bottom.svn" android:title="Svn"
+        android:icon="@drawable/ic_baseline_brightness_2_24"/>
+</menu>

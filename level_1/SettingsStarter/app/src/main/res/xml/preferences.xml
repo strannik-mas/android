@@ -1,0 +1,50 @@
+<!--
+    Дополнительная информация:
+    https://developer.android.com/reference/android/preference/PreferenceScreen.html
+    https://developer.android.com/guide/topics/ui/settings.html
+
+    В качестве ключей хорошо использовать строковые константы из res/values/strings.xml
+
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Синхронизация"
+        android:key="pref_key_sync_settings">
+        <CheckBoxPreference
+            android:key="@string/pref_sync"
+            android:title="Использовать синхронизацию"
+            android:summary="Синхронизировать ли профиль"
+            android:defaultValue="true" />
+            <!--
+                Используются массивы из res/values/arrays.xml
+            -->
+        <ListPreference
+            android:dependency="pref_sync"
+            android:key="@string/pref_syncSyncInterval"
+            android:title="Период синхронизации"
+            android:summary="Как часто синхронизироваться с удаленным сервером"
+            android:dialogTitle="Выберите период"
+            android:entries="@array/pref_syncConnectionTypes_entries"
+            android:entryValues="@array/pref_syncConnectionTypes_values"
+            android:defaultValue="1d" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Бюджет"
+        android:key="@string/pref_key_account_settings">
+        <EditTextPreference android:title="Логин"
+            android:key="@string/pref_accountLogin"
+            android:summary="Логин для доступа к сервису"/>
+        <EditTextPreference android:title="Пароль"
+            android:key="@string/pref_accountPassword"
+            android:password="true"
+            android:summary="Пароль для доступа к сервису"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title=" Анонимность"
+        android:key="@string/pref_key_anonymous_settings">
+        <SwitchPreference
+            android:title="Включить"
+            android:key="@string/pref_key_anonymous"
+            android:summary="Включить режим анонимности"/>
+    </PreferenceCategory>
+</PreferenceScreen>

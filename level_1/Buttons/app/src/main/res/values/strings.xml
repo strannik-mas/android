@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Buttons</string>
+    <string name="main_button_text">Add new button!</string>
+    <string name="button_text_prefix">"Button № "</string>
+</resources>

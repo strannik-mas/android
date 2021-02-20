@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.student1.notification.MainActivity">
+
+    <!-- Простое уведомление -->
+    <Button
+        android:id="@+id/simple"
+        android:text="Простое уведомление"
+        android:onClick="simpleNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Отмена простого уведомления по идентификатору -->
+    <Button
+        android:id="@+id/simple.cancel"
+        android:text="Убрать простое уведомление"
+        android:onClick="simpleCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Запускаем броузер -->
+    <Button
+        android:id="@+id/browser"
+        android:text="Броузер"
+        android:onClick="browserNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Сложное уведомление - кнопки -->
+    <Button
+        android:id="@+id/complex"
+        android:text="Сложное уведомление"
+        android:onClick="complexNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!-- Уведомление - картинка
+        со звуком, вибрацией,
+        с приоритетом переднего плана,
+        с бэкстэком
+     -->
+    <Button
+        android:id="@+id/big.picture"
+        android:text="Большая картинка"
+        android:onClick="bigPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Уведомление со своим View -->
+    <Button
+        android:id="@+id/custom"
+        android:text="Собственное уведомление"
+        android:onClick="custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Уведомление с полем inline reply -->
+    <Button
+        android:text="Inline reply уведомление"
+        android:onClick="inlineReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Progress"
+        android:onClick="progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

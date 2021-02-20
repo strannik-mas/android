@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirstProject_3_2</string>
+    <string name="button_text">Click me!</string>
+    <string name="button_message">Меня нажали!</string>
+    <string name="hello">Bonjour!</string>
+    <string name="flag_name">flagBIG</string>
+</resources>

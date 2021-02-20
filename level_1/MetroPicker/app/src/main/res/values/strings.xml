@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MetroPicker</string>
+    <string name="button_text">Select station</string>
+    <string name="no_station_selected_msg">No station selected!</string>
+    <string name="no_activities_msg">There isn\'t appropriate activities</string>
+    <string name="item_clear_text">clear</string>
+    <string name="item_exit_text">exit</string>
+    <string name="item_send_text">send the station</string>
+    <string name="menu_2">back</string>
+</resources>

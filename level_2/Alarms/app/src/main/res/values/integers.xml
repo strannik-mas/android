@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="MAIN_ACTIVITY_PINTENT" type="integer">444</item>
+    <item name="MY_RECEIVER_PINTENT" type="integer">777</item>
+    <item name="NOTIFICATION_ID" type="integer">555</item>
+</resources>

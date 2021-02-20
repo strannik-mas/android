@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ReleaseMoneyTracker</string>
+    <string name="text_field_1">новый курс</string>
+    <string name="add_item">Add item</string>
+    <string name="add_item_screen_title">Новая запись</string>
+    <string name="edit_text_name">Hазвание</string>
+    <string name="edit_text_price_hint">0 &#8372;</string>
+    <string name="price_record">%s &#8372;</string>
+    <string name="main_screen_title">Учет бюджета</string>
+    <string name="tab_incomes">Доходы</string>
+    <string name="tab_expences">Расходы</string>
+    <string name="tab_balance">Балланс</string>
+    <string name="login_button">Login</string>
+    <string name="logo_desc">Ваш незаменимый помощник в управлении бюджетом</string>
+    <string name="balance_title">Ваш балланс</string>
+    <string name="balance_expence">Расход</string>
+    <string name="balance_income">Доход</string>
+
+    <string name="price">%1$d &#8381;</string>
+
+    <string-array name="tab_title">
+        <item>@string/tab_incomes</item>
+        <item>@string/tab_expences</item>
+        <item>@string/tab_balance</item>
+    </string-array>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nocompany.telephony.MainActivity">
+
+
+    <Button
+        android:text="Telephony stats"
+        android:onClick="stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Prepare number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="prepare"/>
+
+    <Button
+        android:text="Call number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="call"/>
+
+
+    <Button
+        android:text="Telephony manager info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="info"/>
+
+    <EditText
+        android:id="@+id/edit.sms"
+        android:hint="Enter sms text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Send sms to 123"
+        android:onClick="sendSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:text="Send sms via manager"
+        android:onClick="sendSmsViaManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

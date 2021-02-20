@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/coordinator"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pagerRecycler"
+        />
+
+    <com.viewpagerindicator.UnderlinePageIndicator
+        android:layout_marginTop="80dp"
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        app:selectedColor="#77ff0000"
+        app:fadeDelay="1000"
+        app:fadeLength="1000"
+        android:layout_gravity="top"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_gravity="top"
+        android:theme="@style/AppThemeToolBar"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shopping_cart_white_24"
+        android:clickable="true"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_margin="36dp"
+        app:layout_anchorGravity="bottom|right"
+        app:layout_anchor="@id/pagerRecycler"
+        android:onClick="fabClicked"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

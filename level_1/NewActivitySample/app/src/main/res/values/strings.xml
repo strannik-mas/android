@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewActivitySample</string>
+    <string name="button_text">Start new Activity</string>
+    <string name="second_activity_text">SECOND ACTIVITY</string>
+    <string name="name_here_hint">Enter you name here</string>
+    <string name="greeting_prefix">"Hello, "</string>
+    <string name="second_button_text">call me</string>
+</resources>
