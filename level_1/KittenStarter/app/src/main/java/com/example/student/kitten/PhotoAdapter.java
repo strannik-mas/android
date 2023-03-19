@@ -2,11 +2,10 @@ package com.example.student.kitten;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.text.Layout;
+
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +48,7 @@ public class PhotoAdapter extends CursorAdapter {
     private void populateView(final Holder holder, Cursor cursor, final Context context) {
 
         Picasso
-                .with(context)
+                .get()
                 .load(
                         // Получаем URL картинки из курсора
                         cursor.getString(

@@ -5,12 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +17,10 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.GridView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -178,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements Callback<Result>,
 
         Call<Result> call = service.search(
                 "flickr.photos.search",
-                "da8f3977e280b5976247b4c617622fe9",
+                "c9b3735b772bd80a3b940f506406a8c8",
                 search,
                 "json",
                 1,

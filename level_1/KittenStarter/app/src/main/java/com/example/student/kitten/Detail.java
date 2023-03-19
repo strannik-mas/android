@@ -1,7 +1,7 @@
 package com.example.student.kitten;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -53,7 +53,7 @@ public class Detail extends AppCompatActivity {
                 url = url.replace("_q.jpg", "_z.jpg");
                 Log.d(TAG, "onCreate: imgURL  " + url);
                 
-                Picasso.with(this)
+                Picasso.get()
                         .load(url)
                         .fit()
                         .centerCrop()

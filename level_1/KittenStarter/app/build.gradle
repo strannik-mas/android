@@ -30,10 +30,10 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:27.1.0'
-    compile 'com.android.support:design:27.1.0'
-    compile 'com.android.support:percent:27.1.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'com.google.android.material:material:1.0.0'
+    compile 'androidx.percentlayout:percentlayout:1.0.0'
+    compile 'com.squareup.picasso:picasso:2.8'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.okhttp3:okhttp:3.8.0'
