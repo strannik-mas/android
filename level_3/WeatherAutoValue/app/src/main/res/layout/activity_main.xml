@@ -17,7 +17,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content" />
         <Button
-            android:onClick="searchCity"
+            android:onClick="searchCityWeather"
             android:text="Search City"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

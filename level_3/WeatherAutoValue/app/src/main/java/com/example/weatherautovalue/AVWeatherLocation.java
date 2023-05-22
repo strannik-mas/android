@@ -7,8 +7,10 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface AVWeatherLocation {
-    @GET("/api/location/search")
-    Call<List<AVLocation>> location(
-            @Query("query") String city
+    @GET("/v1/current.json")
+    Call<AVWeatherCurrent> weather(
+            @Query("key") String key,
+            @Query("q") String city,
+            @Query("aqi") String aqi
     );
 }
