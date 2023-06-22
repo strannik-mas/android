@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.text.TextUtils"/>
+
+        <variable
+            name="user"
+            type="com.example.databinding2023.data.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".EditTextActivity">
+
+        <EditText
+            android:text="@{user.firstName}"
+            android:onTextChanged="@{(text, s, b, c) -> user.firstNameChanged(text)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Новое имя"/>
+
+
+        <EditText
+            android:text="@{user.lastName}"
+            android:onTextChanged="@{(text, s, b, c) -> user.lastNameChanged(text)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Новая фамилия"/>
+    </LinearLayout>
+</layout>

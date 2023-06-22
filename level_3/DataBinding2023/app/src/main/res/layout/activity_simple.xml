@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.databinding2023.data.User" />
+
+        <variable
+            name="handler"
+            type="com.example.databinding2023.NameChangeHandler" />
+
+        <variable
+            name="edit"
+            type="android.widget.EditText" />
+
+        <variable
+            name="url"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SimpleActivity">
+
+        <TextView
+            android:text="@{user.firstName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:text="@{user.lastName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@{user.isAdult() ? @drawable/ic_check_black_24dp : @drawable/ic_clear_black_24dp}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            app:src="@{url}"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <EditText
+            android:id="@+id/newname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Новое имя" />
+
+        <Button
+            android:id="@+id/changename"
+            android:onClick="@{(v) -> handler.change(v, user, edit)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Изменить" />
+
+        <!--android:onClick="@{handler::nameChanged}"-->
+    </LinearLayout>
+</layout>
