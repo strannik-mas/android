@@ -11,8 +11,8 @@ public class MetroViewHolder extends RecyclerView.ViewHolder {
         this.binding = binding;
     }
 
-    public void bind(MetroObject metroObject) {
-        binding.setVariable(BR.obj, metroObject);
+    public void bind(Object object) {
+        binding.setVariable(BR.obj, object);
         binding.executePendingBindings();
     }
 }
