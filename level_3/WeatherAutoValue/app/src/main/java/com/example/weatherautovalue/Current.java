@@ -3,7 +3,7 @@ package com.example.weatherautovalue;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Current {
+public class Current implements WeatherObject {
     @SerializedName("last_updated_epoch")
     @Expose
     public int lastUpdatedEpoch;

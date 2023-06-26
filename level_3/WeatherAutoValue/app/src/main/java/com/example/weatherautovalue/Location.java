@@ -3,7 +3,7 @@ package com.example.weatherautovalue;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Location {
+public class Location implements WeatherObject{
     public String getName() {
         return name;
     }
