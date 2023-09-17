@@ -10,7 +10,6 @@ import io.realm.annotations.PrimaryKey;
 public class User  extends RealmObject{
     private String firstName;
     private String lastName;
-    @Index
     private int age;
 
     @PrimaryKey
