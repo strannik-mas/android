@@ -9,13 +9,15 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.OnLifecycleEvent;
 
 import java.util.List;
 
-public class MyLocationListener implements LocationListener, LifecycleObserver {
+public class MyLocationListener implements LocationListener, LifecycleObserver, DefaultLifecycleObserver {
     private static final String TAG = "happy";
     private Context context;
     private Lifecycle lifecycle;
@@ -50,7 +52,7 @@ public class MyLocationListener implements LocationListener, LifecycleObserver {
     public void onProviderDisabled(@NonNull String provider) {
 
     }
-
+/*
     @SuppressLint("MissingPermission")
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     public void connect() {
@@ -70,6 +72,31 @@ public class MyLocationListener implements LocationListener, LifecycleObserver {
     @SuppressLint("MissingPermission")
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     public void disconnect() {
+        LocationManager manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        manager.removeUpdates(this);
+    }*/
+
+    @SuppressLint("MissingPermission")
+    @Override
+    public void onResume(@NonNull LifecycleOwner owner) {
+        DefaultLifecycleObserver.super.onResume(owner);
+
+        LocationManager manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+
+        //только если состояние активное
+        if (lifecycle.getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
+            manager.requestLocationUpdates(
+                    LocationManager.GPS_PROVIDER,
+                    5 * 1000,
+                    0,
+                    this
+            );
+        }
+    }
+
+    @Override
+    public void onDestroy(@NonNull LifecycleOwner owner) {
+        DefaultLifecycleObserver.super.onDestroy(owner);
         LocationManager manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         manager.removeUpdates(this);
     }
