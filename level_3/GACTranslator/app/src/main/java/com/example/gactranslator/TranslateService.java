@@ -17,7 +17,7 @@ public class TranslateService extends IntentService {
     public static final String LANG = "PARAMETER_LANG";
     public static final String SENTENCE = "PARAMETER_SENTENCE";
 
-    public static final String ENDPOINT = "https://translated-mymemory---translation-memory.p.rapidapi.com";
+    public static final String ENDPOINT = "https://api.mymemory.translated.net";
     private static final String TAG = "TranslateService";
 
     private static MyMemoryTranslate translate = new Retrofit.Builder()
@@ -38,8 +38,12 @@ public class TranslateService extends IntentService {
         TranslateResultDao dao = Repository.getDb().translateDao();
 
         TranslateResult result = new TranslateResult();
-        String sentence = intent.getStringExtra(SENTENCE);
-        String lang = intent.getStringExtra(LANG);
+        String sentence = null;
+        String lang = null;
+        if (intent != null) {
+            sentence = intent.getStringExtra(SENTENCE);
+            lang = intent.getStringExtra(LANG);
+        }
 
         if(!TextUtils.isEmpty(sentence) && !TextUtils.isEmpty(lang)){
 
@@ -50,12 +54,16 @@ public class TranslateService extends IntentService {
             try {
                 Response<Translate> response = call.execute();
                 Translate body = response.body();
-                ResponseData responseData = body.getResponseData();
-                String translateResult = responseData.getTranslatedText();
-                result.setResult(translateResult);
-                Log.d(TAG, "onHandleIntent: result: " + translateResult);
+                ResponseData responseData = null;
+                if (body != null) {
+                    responseData = body.getResponseData();
+                    String translateResult = responseData.getTranslatedText();
+                    result.setResult(translateResult);
+                    Log.d(TAG, "onHandleIntent: result: " + translateResult);
+                }
             } catch (Exception e) {
                 result.setException(e.getMessage());
+                result.setStatus("ERROR");
                 Log.d(TAG, "onHandleIntent: exception: " + e.getMessage());
             }
 
